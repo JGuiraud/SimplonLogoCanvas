@@ -8,20 +8,44 @@ $(document).ready(function(){
     var ctx = c.getContext("2d");
 
     /* -- text Simplon -- */
-   
+ function drawSimplonText(){  
     ctx.beginPath();
     ctx.font = "125px sans-serif";
     ctx.fillText("SIMPL   N", 270, 320);
+ };
+ drawSimplonText();
 
     /* -- text Occitanie -- */
-   
+ function drawOccitanie(){  
     ctx.beginPath();
     ctx.font="95px Sans-serif";
     ctx.fillStyle = '#E20746';
     ctx.fillText("Occitanie", 438, 400);
+ };
+ drawOccitanie();
+
+     /* -- logo -- */
+        /*--Circle--*/
+function drawCircle(){
+    ctx.beginPath();
+    ctx.arc(695,278,43,0,2*Math.PI);
+    ctx.lineWidth = 9;
+    ctx.strokeStyle = "#E20746";
+    ctx.stroke();
+};
+drawCircle();
+
+        /*--Squares--*/
+function drawSquare(){
+    ctx.beginPath();
+    ctx.fillStyle = "#FFDD00";
+    ctx.fillRect(684, 250, 21, 21);
+    ctx.fillRect(684, 285, 21, 21);
+};
+drawSquare();
 
     /* -- YELLOW shape around -- */
-    
+function drawYellowShape () {
     ctx.beginPath();
     ctx.strokeStyle = "#FFDD00";
     
@@ -44,9 +68,11 @@ $(document).ready(function(){
 
     ctx.stroke();
     ctx.closePath();
+};
+drawYellowShape();
 
     /* -- RED shape around-- */
-       
+function drawRedShape () {
     ctx.beginPath();
     ctx.strokeStyle = "#E20746";
     ctx.lineWidth = 3;
@@ -68,18 +94,10 @@ $(document).ready(function(){
     ctx.lineWidth = 4;
 
     ctx.stroke();
+};
+drawRedShape();
 
-    /* -- logo -- */
-    ctx.beginPath();
-    ctx.arc(695,278,43,0,2*Math.PI);
-    ctx.lineWidth = 9;
-    ctx.strokeStyle = "#E20746";
-    ctx.stroke();
 
-    ctx.beginPath();
-    ctx.fillStyle = "#FFDD00";
-    ctx.fillRect(684, 250, 21, 21);
-    ctx.fillRect(684, 285, 21, 21);
 
 });
 
